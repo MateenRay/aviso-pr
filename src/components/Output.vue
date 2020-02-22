@@ -1,7 +1,23 @@
 <template>
   <v-container>
     <v-row class="text-center">
-      <v-treeview hoverable indeterminate-icon="mdi-bookmark-minus" :items="folders"></v-treeview>
+      <v-treeview
+        v-model="tree"
+        :open="open"
+        :items="folders"
+        activatable
+        item-key="name"
+        open-on-click
+      >
+        <template v-slot:prepend="{ item, open }">
+          <v-icon v-if="!item.file">
+            {{ open ? 'mdi-folder-open' : 'mdi-folder' }}
+          </v-icon>
+          <v-icon v-else>
+            {{ files[item.file] }}
+          </v-icon>
+        </template>
+      </v-treeview>
     </v-row>
   </v-container>
 </template>
