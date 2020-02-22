@@ -12,7 +12,7 @@
       <v-spacer></v-spacer>
 
       <v-btn
-        href="https://github.com/MateenRay"
+        href="https://github.com/MateenRay/aviso-pr"
         target="_blank"
         text
       >
@@ -25,10 +25,10 @@
       
       <v-row align="center">
         <v-col cols="6">
-          <Output/>
+          <Editor/>
         </v-col>
         <v-col cols="6"> 
-          <Editor/>
+          <Output/>
           </v-col>
       </v-row>
     </v-content>
